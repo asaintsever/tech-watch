@@ -1,16 +1,33 @@
-# tech_watch_mobile_app
+# Tech-Watch Mobile App (Android & iOS)
 
-A new Flutter project.
+Mobile app for Technology Watch.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This [Flutter](https://docs.flutter.dev/) application has been generated using Flutter CLI:
 
-A few resources to get you started if this is your first Flutter project:
+```sh
+flutter create --platforms android,ios --org com.asaintsever tech_watch_mobile_app
+```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Set or update app icon
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Using [flutter_launcher_icons](https://pub.dev/packages/flutter_launcher_icons) package with config in [pubspec.yaml](pubspec.yaml):
+
+```yaml
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon/tech-watch-app.png"
+  # Android adaptive icon configuration for better appearance
+  adaptive_icon_background: "#1a1a2e"
+  adaptive_icon_foreground: "assets/icon/tech-watch-app.png"
+  # This removes white space and makes icon fill the safe zone
+  min_sdk_android: 21
+```
+
+Run following command to update app icon using icon provided in `assets/icon` folder:
+
+```sh
+dart run flutter_launcher_icons
+```
